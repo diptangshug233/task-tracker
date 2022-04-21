@@ -1,21 +1,21 @@
-import {MdDelete} from 'react-icons/md'
+import { MdDelete } from "react-icons/md";
 
 const Task = ({ task, deleteTask, toggleReminder }) => {
   return (
     <div
-      className={`task ${task.reminder && 'reminder'}`}
+      className={`task ${task.reminder && "reminder"}`}
       onDoubleClick={() => toggleReminder(task.id)}
     >
       <h3>
-        {task.text}{' '}
+        {task.text}{" "}
         <MdDelete
-          style={{ color: 'red', cursor: 'pointer' }}
+          style={{ color: "red", cursor: "pointer" }}
           onClick={() => deleteTask(task.id)}
         />
       </h3>
       <p>{task.desc}</p>
     </div>
-  )
-}
+  );
+};
 
-export default Task
+export default Task;
